@@ -1,3 +1,6 @@
+import item.Item;
+import people.Client;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -24,7 +27,7 @@ public class Store {
         System.out.println("Store is open");
     }
 
-    public void sell(Products product, client client){
+    public void sell(Products product, Client client){
         double price = 0;
         for (int i=0; i<productsList.size(); i++){
             if(product.equals(productsList.get(i))){
