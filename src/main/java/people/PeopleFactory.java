@@ -4,14 +4,20 @@ import java.math.BigInteger;
 
 public class PeopleFactory {
 
-    public Employee  createEmpleoyee(){
 
-        return new Employee();
-    }
+    public Person create (String type, double budget, int age){
+        Person person = null;
 
-    public Client createClient(double budget, BigInteger age){
+        if (type.equals( "Employee")){
+            person=  new Employee();
+        }
 
-        return new Client(budget, age);
+        else if (type.equals( "Cliente")){
+            person=  new Client(budget,age);
+        }
+
+        return person;
+
     }
 
 }

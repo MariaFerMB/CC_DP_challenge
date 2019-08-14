@@ -1,4 +1,7 @@
+package logic;
+
 import item.Item;
+import logic.Products;
 
 import java.util.Queue;
 

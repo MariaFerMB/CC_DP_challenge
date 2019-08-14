@@ -9,7 +9,4 @@ public abstract class Person {
     String id = Main.faker.address().fullAddress();
     String address = Main.faker.phoneNumber().cellPhone();
     String phone = Main.faker.number().digits(9);
-
-
-
 }

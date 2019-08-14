@@ -1,3 +1,5 @@
+package logic;
+
 import item.Item;
 import people.Client;
 
@@ -24,7 +26,7 @@ public class Store {
     }
 
     public void openStore(){
-        System.out.println("Store is open");
+        System.out.println("logic.Store is open");
     }
 
     public void sell(Products product, Client client){
