@@ -1,13 +1,16 @@
 package people;
 
-import com.github.javafaker.Faker;
 import item.Product;
 
 import java.util.List;
 
-public class Employee extends Person{
+public class Employee extends Person {
 
     public Employee(){
+
+
+
+
     }
 
     public void sell(List<Product> productsList,Product product, Client client){
@@ -15,12 +18,12 @@ public class Employee extends Person{
         for (int i=0; i<productsList.size(); i++){
             if(product.equals(productsList.get(i))){
                 price = productsList.get(i).getPrice();
-                if(client.budget - price>=0){
-                    client.budget = client.budget - price;
-                    client.itemsPurchased.add(productsList.get(i).removeItem());
+                if(client.getBudget() - price>=0){
+                    client.setBudget(client.getBudget() - price) ;
+                    client.getItemsPurchased().add(productsList.get(i).removeItem());
                 }
                 else {
-                    System.out.println("You don't have enough money to buy this product");
+                    System.out.println(client.name+ "  don't have enough money to buy "+ product.name );
                 }
             }
         }
