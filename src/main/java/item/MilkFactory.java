@@ -12,4 +12,10 @@ public class MilkFactory implements AbstractFactory {
         Product chocolateMilk = new Milk("chocolate milk", 3.1, 54);
         return chocolateMilk;
     }
+
+    @Override
+    public Product createStrawberry() {
+        Product strawberryMilk = new Milk("strawberry milk", 4.0, 36);
+        return strawberryMilk;
+    }
 }

@@ -13,4 +13,10 @@ public class CookiesFactory implements AbstractFactory {
         Product chocolateCookie = new Cookie("chocolate cookie", 2.0, 17);
         return chocolateCookie;
     }
+
+    @Override
+    public Product createStrawberry() {
+        Product strawberryCookie = new Cookie("strawberry cookie", 1.7, 30);
+        return strawberryCookie;
+    }
 }
