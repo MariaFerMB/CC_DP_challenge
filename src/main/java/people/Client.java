@@ -25,10 +25,16 @@ public class Client extends Person{
     public void buy(){
     }
     public void printShopping(){
+        System.out.println("-----------------------------------");
+        System.out.println("Name:   "+name);
+        System.out.println("Address:  "+address);
+        System.out.println("Phone:   "+phone);
+        System.out.println("Items:");
 
         for(Item item: itemsPurchased){
             item.printItem();
             }
+        System.out.println("-----------------------------------");
 
     }
 }

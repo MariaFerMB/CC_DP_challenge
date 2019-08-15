@@ -25,16 +25,19 @@ public class Main {
 
         Product vanillaCookie = cookiesFactory.createVanilla();
         Product chocolateCookie = cookiesFactory.createChocolate();
+        Product strawberryCookie = cookiesFactory.createStrawberry();
         Product vanillaMilk = milkFactory.createVanilla();
         Product chocolateMilk = milkFactory.createChocolate();
+        Product strawberryMilk = milkFactory.createStrawberry();
 
         productsList.add(vanillaCookie);
         productsList.add(chocolateCookie);
+        productsList.add(strawberryCookie);
         productsList.add(vanillaMilk);
         productsList.add(chocolateMilk);
+        productsList.add(strawberryMilk);
         Store store = new Store(employees,"tiendita", productsList);
-//
-//        store.openStore();
+
         for(int i=0;i<5;i++){
             employees.add((Employee) peopleFactory.create("Employee",0, 0));
         }
@@ -51,6 +54,7 @@ public class Main {
         clients.add((Client) peopleFactory.create( "Client",13.0, 19));
         clients.add((Client) peopleFactory.create("Client", 43.2, 33));
 
+        store.openStore();
 //        store.sell(vanillaCookie,clients.get(0));
 //        store.sell(vanillaCookie,clients.get(0));
 //        store.sell(vanillaCookie,clients.get(4));
@@ -63,8 +67,12 @@ public class Main {
 //        store.sell(ChocolateCookie,clients.get(9));
 //        store.sell(ChocolateCookie,clients.get(9));
 //        store.sell(ChocolateCookie,clients.get(1));
-//
-//        store.closeStore();
+
+
+        store.closeStore();
+        for(Client client: clients){
+            client.printShopping();
+        }
 
     }
 }
