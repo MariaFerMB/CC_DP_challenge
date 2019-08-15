@@ -12,7 +12,7 @@ public class PeopleFactory {
             person=  new Employee();
         }
 
-        else if (type.equals( "Cliente")){
+        else if (type.equals( "Client")){
             person=  new Client(budget,age);
         }
 

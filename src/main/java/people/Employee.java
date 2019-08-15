@@ -15,8 +15,13 @@ public class Employee extends Person{
         for (int i=0; i<productsList.size(); i++){
             if(product.equals(productsList.get(i))){
                 price = productsList.get(i).getPrice();
-                client.budget = client.budget - price;
-                client.itemsPurchased.add(productsList.get(i).removeItem());
+                if(client.budget - price>=0){
+                    client.budget = client.budget - price;
+                    client.itemsPurchased.add(productsList.get(i).removeItem());
+                }
+                else {
+                    System.out.println("You don't have enough money to buy this product");
+                }
             }
         }
         if (price==0){

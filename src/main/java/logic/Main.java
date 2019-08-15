@@ -1,5 +1,7 @@
 package logic;
 
+import item.Cereal;
+import item.CerealFactory;
 import item.CookiesFactory;
 import item.MilkFactory;
 import item.Product;
@@ -17,6 +19,7 @@ public class Main {
     static PeopleFactory peopleFactory= new PeopleFactory();
     static CookiesFactory cookiesFactory= new CookiesFactory();
     static MilkFactory milkFactory= new MilkFactory();
+    static CerealFactory cerealFactory= new CerealFactory();
     public static void main(String args[]){
 
         Queue<Employee> employees =new LinkedList<>();
@@ -29,6 +32,9 @@ public class Main {
         Product vanillaMilk = milkFactory.createVanilla();
         Product chocolateMilk = milkFactory.createChocolate();
         Product strawberryMilk = milkFactory.createStrawberry();
+        Product vanillaCereal = cerealFactory.createVanilla();
+        Product chocolateCereal = cerealFactory.createChocolate();
+        Product strawberryCereal = cerealFactory.createStrawberry();
 
         productsList.add(vanillaCookie);
         productsList.add(chocolateCookie);
@@ -36,6 +42,10 @@ public class Main {
         productsList.add(vanillaMilk);
         productsList.add(chocolateMilk);
         productsList.add(strawberryMilk);
+        productsList.add(vanillaCereal);
+        productsList.add(chocolateCereal);
+        productsList.add(strawberryCereal);
+
         Store store = new Store(employees,"tiendita", productsList);
 
         for(int i=0;i<5;i++){
@@ -55,7 +65,10 @@ public class Main {
         clients.add((Client) peopleFactory.create("Client", 43.2, 33));
 
         store.openStore();
-//        store.sell(vanillaCookie,clients.get(0));
+        store.employees.peek().sell(store.productsList,vanillaCookie,clients.get(0));
+        store.employees.peek().sell(store.productsList,vanillaMilk,clients.get(3));
+        store.employees.peek().sell(store.productsList,strawberryCereal,clients.get(3));
+        store.employees.peek().sell(store.productsList,chocolateCookie,clients.get(7));
 //        store.sell(vanillaCookie,clients.get(0));
 //        store.sell(vanillaCookie,clients.get(4));
 //        store.sell(ChocolateCookie,clients.get(4));
