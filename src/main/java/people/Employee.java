@@ -6,12 +6,7 @@ import java.util.List;
 
 public class Employee extends Person {
 
-    public Employee(){
-
-
-
-
-    }
+    public Employee(){    }
 
     public void sell(List<Product> productsList,Product product, Client client){
         double price = 0;
@@ -27,7 +22,7 @@ public class Employee extends Person {
                 }
             }
         }
-        if (price==0){
+        if (price == 0){
             System.out.println("That product isn't exists on this store");
         }
     }

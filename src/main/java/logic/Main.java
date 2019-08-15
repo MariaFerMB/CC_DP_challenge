@@ -15,12 +15,12 @@ import java.util.Queue;
 
 public class Main {
     public static Faker faker = new Faker();
-    static CookiesFactory cookiesFactory= new CookiesFactory();
-    static MilkFactory milkFactory= new MilkFactory();
-    static CerealFactory cerealFactory= new CerealFactory();
+    static CookiesFactory cookiesFactory = new CookiesFactory();
+    static MilkFactory milkFactory = new MilkFactory();
+    static CerealFactory cerealFactory = new CerealFactory();
     public static void main(String args[]){
 
-        Queue<Employee> employees =new LinkedList<>();
+        Queue<Employee> employees = new LinkedList<>();
         List<Product> productsList = new ArrayList<>();
 
         Product vanillaCookie = cookiesFactory.createVanilla();

@@ -81,37 +81,4 @@ public class Client extends Person {
          System.out.println("-------------------------------------------------------------------------");
 
     }
-
-
-
-
-
-
-
-
-
-//    public Client2( double budget, int age) {
-////        this.name = name;
-////        this.id = id;
-////        this.address = address;
-////        this.phone = phone;
-//        this.budget = budget;
-//        this.age = age;
-//        this.itemsPurchased = new LinkedList<>();
-//    }
-//
-
-//    public void printShopping(){
-//        System.out.println("-----------------------------------");
-//        System.out.println("Name:   "+name);
-//        System.out.println("Address:  "+address);
-//        System.out.println("Phone:   "+phone);
-//        System.out.println("Items:");
-//
-//        for(Item item: itemsPurchased){
-//            item.printItem();
-//            }
-//        System.out.println("-----------------------------------");
-//
-//    }
 }

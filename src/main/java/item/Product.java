@@ -15,7 +15,7 @@ public class Product {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
-        this.items =new LinkedList<>();
+        this.items = new LinkedList<>();
         addItems(generateItemsQueue());
     }
 
@@ -38,10 +38,10 @@ public class Product {
         LinkedList<Item> items = new LinkedList<>();
         int id = 0;
         for (int i=0;i<quantity;i++){
-            id =Main.faker.number().numberBetween(0,1000000);
+            id = Main.faker.number().numberBetween(0,1000000);
             Item item = new Item(id,name,price);
             while (isItemInList(item, items)){
-                id =Main.faker.number().numberBetween(0,1000000);
+                id = Main.faker.number().numberBetween(0,1000000);
                 item = new Item(id,name,price); }
             items.add(item);
         }
@@ -50,7 +50,7 @@ public class Product {
 
     public static boolean isItemInList(Item expectedItem, List<Item> lista){
         for(Item item: lista){
-            if (expectedItem.getId()==item.getId()){
+            if (expectedItem.getId() == item.getId()){
                 return true;
             }
         }
