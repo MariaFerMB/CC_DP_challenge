@@ -32,7 +32,7 @@ public class Main {
         productsList.add(chocolateCookie);
         productsList.add(vanillaMilk);
         productsList.add(chocolateMilk);
-//        logic.Store store = new logic.Store(employeesNames,employeesIds,employeesAddresses,employeesphones,"tiendita", productsList);
+        Store store = new Store(employees,"tiendita", productsList);
 //
 //        store.openStore();
         for(int i=0;i<5;i++){

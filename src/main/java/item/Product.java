@@ -36,10 +36,13 @@ public class Product {
 
     private  LinkedList<Item> generateItemsQueue(){
         LinkedList<Item> items = new LinkedList<>();
+        int id = 0;
         for (int i=0;i<quantity;i++){
-            Item item = new Item(Main.faker.number().numberBetween(0,1000000));
+            id =Main.faker.number().numberBetween(0,1000000);
+            Item item = new Item(id,name,price);
             while (isItemInList(item, items)){
-                item = new Item(Main.faker.number().numberBetween(0,1000000)); }
+                id =Main.faker.number().numberBetween(0,1000000);
+                item = new Item(id,name,price); }
             items.add(item);
         }
         return items;
@@ -47,7 +50,7 @@ public class Product {
 
     public static boolean isItemInList(Item expectedItem, List<Item> lista){
         for(Item item: lista){
-            if (expectedItem.id==item.id){
+            if (expectedItem.getId()==item.getId()){
                 return true;
             }
         }

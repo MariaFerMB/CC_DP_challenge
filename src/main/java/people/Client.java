@@ -3,14 +3,14 @@
 package people;
 import item.Item;
 
-import java.util.List;
-import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Client extends Person{
 
     public double budget;
     public int age;
-    public List<Item> itemsPurchased;
+    public Queue<Item> itemsPurchased;
 
     public Client( double budget, int age) {
 //        this.name = name;
@@ -19,9 +19,16 @@ public class Client extends Person{
 //        this.phone = phone;
         this.budget = budget;
         this.age = age;
-        this.itemsPurchased = new ArrayList<>();
+        this.itemsPurchased = new LinkedList<>();
     }
 
     public void buy(){
+    }
+    public void printShopping(){
+
+        for(Item item: itemsPurchased){
+            item.printItem();
+            }
+
     }
 }
